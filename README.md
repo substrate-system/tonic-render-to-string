@@ -1,33 +1,42 @@
-# template ts
-![tests](https://github.com/bicycle-codes/util/actions/workflows/nodejs.yml/badge.svg)
-[![types](https://img.shields.io/npm/types/@bicycle-codes/util?style=flat-square)](README.md)
-[![dependencies](https://img.shields.io/badge/dependencies-zero-brightgreen.svg?style=flat-square)](package.json)
+# Tonic Render To String
+![tests](https://github.com/substrate-system/tonic-render-to-string/actions/workflows/nodejs.yml/badge.svg)
+[![types](https://img.shields.io/npm/types/@substrate-system/tonic-render-to-string?style=flat-square)](README.md)
+[![module](https://img.shields.io/badge/module-ESM%2FCJS-blue?style=flat-square)](README.md)
 [![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/)
-[![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+[![Common Changelog](https://nichoth.github.io/badge/common-changelog.svg)](./CHANGELOG.md)
+[![install size](https://flat.badgen.net/packagephobia/install/@substrate-system/tonic-render-to-string)](https://packagephobia.com/result?p=@substrate-system/tonic-render-to-string)
+[![license](https://img.shields.io/badge/license-Big_Time-blue?style=flat-square)](LICENSE)
 
-A template for typescript *dependency* modules that run in node. See [template-ts-browser](https://github.com/nichoth/template-ts-browser) for the same thing but targeting a browser environment.
 
->
-> [!IMPORTANT]  
-> This builds to **ESM only**.
->
+Create strings from web components.
 
-## use
+<details><summary><h2>Contents</h2></summary>
+<!-- toc -->
+</details>
 
-1. Use the template button in github. Or clone this then `rm -rf .git && git init`.
-2. `npm i && npm init`.
-3. Edit `README.md` -- change the CI badge URL + rewrite docs
-5. Edit the source code in `src/index.ts`, edit tests in `test`
+## Install
 
-## featuring
+```sh
+npm i -S @substrate-system/tonic-render-to-string
+```
 
-* Compile the source to ESM, and put compiled files in `dist`.
-* Ignore `dist` and `*.js` in git, but don't ignore them in npm.
-  That way we don't commit any compiled code to git, but it is
-  available to consumers.
-* use npm's `prepublishOnly` hook to compile the code before publishing to npm.
-* use `exports` field in `package.json` to make sure the right format is used by consumers.
-* `preversion` npm hook -- lint via `standardx`.
-* `postversion` npm hook -- `git push && git push --tags && npm publish`
-* compile tests and run in a node environment
-* CI via github actions
+## API
+
+This exposes ESM and common JS via [package.json `exports` field](https://nodejs.org/api/packages.html#exports).
+
+### ESM
+```js
+import { render } from '@substrate-system/tonic-render-to-string'
+```
+
+### Common JS
+```js
+require('@substrate-system/tonic-render-to-string')
+```
+
+## Use
+
+### JS
+```js
+import { render } from '@substrate-system/tonic-render-to-string'
+```
