@@ -11,7 +11,15 @@
 Create strings from web components.
 
 <details><summary><h2>Contents</h2></summary>
+
 <!-- toc -->
+
+- [Install](#install)
+- [Use](#use)
+  * [Example](#example)
+
+<!-- tocstop -->
+
 </details>
 
 ## Install
@@ -20,23 +28,26 @@ Create strings from web components.
 npm i -S @substrate-system/tonic-render-to-string
 ```
 
-## API
-
-This exposes ESM and common JS via [package.json `exports` field](https://nodejs.org/api/packages.html#exports).
-
-### ESM
-```js
-import { render } from '@substrate-system/tonic-render-to-string'
-```
-
-### Common JS
-```js
-require('@substrate-system/tonic-render-to-string')
-```
-
 ## Use
 
-### JS
+>
+> [!IMPORTANT]  
+> `renderToString` must be imported before `Tonic`, so the browser polyfills
+> are set up.
+>
+
+### Example
+
 ```js
-import { render } from '@substrate-system/tonic-render-to-string'
+import { renderToString } from '@substrate-system/tonic-render-to-string'
+// import `renderToString` before `Tonic`
+import Tonic from '@substrate-system/tonic'
+
+class MyComponent extends Tonic {
+    render () {
+        return this.html`<div>Hello, World!</div>`
+    }
+}
+
+const html = await renderToString(MyComponent)
 ```
