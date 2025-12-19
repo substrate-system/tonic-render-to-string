@@ -8,7 +8,8 @@
 [![license](https://img.shields.io/badge/license-Big_Time-blue?style=flat-square)](LICENSE)
 
 
-Create strings from web components.
+Create strings from web components. This uses
+[`parse5`](https://github.com/inikulin/parse5) to polyfill some browser APIs.
 
 <details><summary><h2>Contents</h2></summary>
 

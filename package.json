@@ -1,15 +1,19 @@
 {
-  "type": "module",
-  "private": true,
+  "name": "@substrate-system/tonic-render-to-string",
   "version": "0.0.0",
-  "main": "dist/index.js",
-  "files": [
-    "./dist/*"
-  ],
+  "description": "Create strings from web components",
+  "type": "module",
   "exports": {
     ".": "./dist/index.js",
     "./*": "./dist/*.js"
   },
+  "main": "dist/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "files": [
+    "./dist/*"
+  ],
   "scripts": {
     "lint": "eslint \"./**/*.{ts,js}\"",
     "test": "esbuild test/index.ts --platform=node --format=esm --keep-names --bundle | node --input-type=module | tap-spec",
@@ -38,6 +42,21 @@
     "markdown-toc": "^1.2.0",
     "tap-spec": "^5.0.0",
     "typescript": "^5.7.2"
+  },
+  "keywords": [
+    "web",
+    "component",
+    "string",
+    "server",
+    "ssr"
+  ],
+  "homepage": "https://github.com/substrate-system/tonic-render-to-string",
+  "bugs": {
+    "url": "https://github.com/substrate-system/tonic-render-to-string/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/substrate-system/tonic-render-to-string.git"
   },
   "license": "SEE LICENSE IN LICENSE",
   "author": "nichoth <nichoth@gmail.com> (https://nichoth.com)"
